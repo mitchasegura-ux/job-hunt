@@ -166,9 +166,14 @@ Never send anything. Draft it, show it, let them send it.
 
 ## Initialize a workspace
 
-Create the shape below and write `jobsearch.config.yml`. If the user already
-has materials in a different layout, point the config at what exists rather
-than moving their files.
+Create the shape below and write `jobsearch.config.yml` (template:
+`jobsearch.config.example.yml` in this folder). If the user already has
+materials in a different layout, point the config at what exists rather than
+moving their files.
+
+Include the `formatting:` block: font, font sizes, and margins for resumes and
+letters. `render.sh` reads it. Confirm the font renders
+(`printf x | pandoc -o /tmp/fonttest.pdf --pdf-engine=xelatex -V mainfont="<font>"`) before saving it.
 
 ```
 workspace/

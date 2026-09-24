@@ -36,6 +36,17 @@ constraints:
   hard_gates:
     - No active security clearance. Anything requiring one is disqualified.
 
+# How resumes and letters render to PDF. /job-init asks for these.
+# font must be installed on this machine. Check with:
+#   printf x | pandoc -o /tmp/fonttest.pdf --pdf-engine=xelatex -V mainfont="<font>"
+# Leave font empty to use the LaTeX default (Latin Modern), which always works.
+formatting:
+  font:             "Helvetica Neue"
+  resume_font_size: 10pt
+  letter_font_size: 11pt
+  resume_margin:    0.5in
+  letter_margin:    0.9in
+
 letter:
   target_words: 400       # measure this from past_letters, do not guess
   max_words:    500

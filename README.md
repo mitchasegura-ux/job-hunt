@@ -26,19 +26,12 @@ agents.
 
 ### Requirements
 
-| Need | Why | Install (macOS) | Install (Linux) |
-|---|---|---|---|
-| Python 3.9+ | tracker and letter checker | `brew install python` | usually preinstalled |
-| pandoc | markdown to docx/pdf | `brew install pandoc` | `apt install pandoc` |
-| xelatex | pdf engine | `brew install --cask mactex-no-gui` | `apt install texlive-xetex` |
-| git | cloning this repo | `xcode-select --install` or `brew install git` | `apt install git` |
-
-On Linux or Windows, also set a font that exists on your machine, since the
-default (Helvetica Neue) is macOS only:
-
-```bash
-export JOBHUNT_FONT="DejaVu Sans"
-```
+| Need | Why | macOS | Linux | Windows |
+|---|---|---|---|---|
+| Python 3.9+ | tracker and letter checker | `brew install python` | usually preinstalled | `winget install Python.Python.3.12` |
+| pandoc | markdown to docx/pdf | `brew install pandoc` | `apt install pandoc` | `winget install JohnMacFarlane.Pandoc` |
+| xelatex | pdf engine | `brew install --cask mactex-no-gui` | `apt install texlive-xetex` | `winget install MiKTeX.MiKTeX` |
+| git + bash | cloning, and the `.sh` scripts | `xcode-select --install` | `apt install git` | `winget install Git.Git` (includes Git Bash) |
 
 The Python scripts create their own virtual environment with `openpyxl` on
 first run. You do not need to `pip install` anything.
@@ -51,9 +44,17 @@ cd job-hunt
 ./install.sh
 ```
 
+**Windows** (PowerShell, from the cloned folder):
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\install.ps1
+```
+
 `install.sh` symlinks the skill and its commands into place, so a later
 `git pull` updates every install. Pick one agent with `./install.sh claude` or
-`./install.sh codex`.
+`./install.sh codex` (Windows: `.\install.ps1 claude`). On Windows the skill
+folder is linked but the command files are copied, so rerun `install.ps1` after
+a `git pull`. Agents on Windows run the `.sh` scripts through Git Bash.
 
 | Agent | Skill lands in | Commands land in | You type |
 |---|---|---|---|
@@ -112,6 +113,7 @@ for weeks.
 | Locations | Portland, Beaverton, remote | search matrix |
 | Career tracks and titles | IT support; AV technician | search queries, one base resume per track |
 | Hard gates | no security clearance | auto-disqualifies postings that require it |
+| Font, sizes, margins | Helvetica Neue, defaults | how resumes and letters render to PDF (it checks the font is installed) |
 | Where existing files live | "my resumes are in `~/Documents/CVs`" | config points at them instead of moving them |
 
 ### What it creates
@@ -284,7 +286,7 @@ bash $SKILL_DIR/scripts/render.sh "Applications/Systems Administrator - Acme Hea
 |---|---|
 | `REFUSING TO WRITE: Microsoft Excel is running` | Excel's next save would erase the change. Quit Excel and rerun. |
 | Rows you added disappeared | Same cause: Excel was open during the write. |
-| `PDF RENDER FAILED` mentioning a font | Set `JOBHUNT_FONT` to an installed font. |
+| `PDF RENDER FAILED` mentioning a font | The font in `formatting.font` is not installed. Change it in `jobsearch.config.yml`, or leave it empty for the default. |
 | `expected 2, TRIM IT` after rendering | The resume ran long. Ask the agent to trim it. |
 | `externally-managed-environment` from pip | Use the python that `ensure_venv.sh` prints, not system python. |
 | Slash commands do not appear | Restart the agent after `./install.sh`. In Codex, type `/prompts:`. |
@@ -305,7 +307,8 @@ scripts/
   pdf_pages.py               PDF page count with no dependencies
   ensure_venv.sh             creates the skill's python venv
 jobsearch.config.example.yml
-install.sh
+install.sh                   macOS / Linux installer
+install.ps1                  Windows installer
 ```
 
 ## Privacy

@@ -11,15 +11,19 @@ set -euo pipefail
 
 SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 VENV="$SKILL_DIR/.venv"
-PY="$VENV/bin/python"
+# Windows (Git Bash) venvs put python in Scripts/, everything else in bin/.
+vpy() { [ -x "$VENV/Scripts/python.exe" ] && echo "$VENV/Scripts/python.exe" || echo "$VENV/bin/python"; }
+PY="$(vpy)"
 
 if [ ! -x "$PY" ]; then
-  python3 -m venv "$VENV" >&2
+  SYS_PY="$(command -v python3 || command -v python)"
+  "$SYS_PY" -m venv "$VENV" >&2
+  PY="$(vpy)"
 fi
 
 if ! "$PY" -c "import openpyxl" 2>/dev/null; then
-  "$VENV/bin/pip" install --quiet --upgrade pip >&2 2>/dev/null || true
-  "$VENV/bin/pip" install --quiet openpyxl >&2
+  "$PY" -m pip install --quiet --upgrade pip >&2 2>/dev/null || true
+  "$PY" -m pip install --quiet openpyxl >&2
 fi
 
 echo "$PY"

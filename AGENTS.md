@@ -42,9 +42,12 @@ Workspace paths (resumes, tracker, applications folder) come from
 ## System requirements
 
 - Python 3.9+ (`ensure_venv.sh` creates a local `.venv` with openpyxl)
-- `pandoc` and `xelatex` for `render.sh`. On Linux or Windows set
-  `JOBHUNT_FONT` to an installed font, since the default is macOS's Helvetica
-  Neue.
+- `pandoc` and `xelatex` for `render.sh`. Font, sizes, and margins come from
+  the `formatting:` block in the user's `jobsearch.config.yml`, set during
+  `/job-init`.
+- On Windows, run the `.sh` scripts with Git Bash (`bash scripts/render.sh ...`).
+  The venv python is `.venv\Scripts\python.exe`; `ensure_venv.sh` prints the
+  right path on every platform.
 - `tracker.py` refuses to write while Microsoft Excel is running (macOS check
   via `pgrep`; a no-op elsewhere). Close the tracker in any spreadsheet app
   before writing.
