@@ -1,3 +1,7 @@
+---
+description: Report where every application stands and the next action
+---
+
 # /job-status - Where everything stands
 
 Invoke the `job-hunting` skill and follow its **Status** section.

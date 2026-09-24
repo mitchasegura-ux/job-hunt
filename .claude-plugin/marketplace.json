@@ -1,0 +1,15 @@
+{
+  "name": "job-hunt",
+  "description": "Job search skill and slash commands for Claude Code.",
+  "owner": {
+    "name": "Mitch Segura",
+    "url": "https://github.com/mitchasegura-ux"
+  },
+  "plugins": [
+    {
+      "name": "job-hunting",
+      "description": "Run a job search end to end: screen postings, write cover letters in your voice, track applications, prep interviews.",
+      "source": "./"
+    }
+  ]
+}

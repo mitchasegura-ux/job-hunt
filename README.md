@@ -1,5 +1,11 @@
 # job-hunting
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Claude Code plugin](https://img.shields.io/badge/Claude_Code-plugin-d97757)
+![Codex CLI](https://img.shields.io/badge/Codex_CLI-supported-black)
+
+![Demo: a ranked job shortlist with odds and disqualifications, then the cover letter checker failing a draft for em-dashes and AI phrases](docs/demo.svg)
+
 An agent skill that runs a job search end to end: find and screen live
 postings, build tailored application packets (resume + cover letter + internal
 job notes) in the candidate's own voice, track everything in an Excel sheet,
@@ -37,6 +43,18 @@ The Python scripts create their own virtual environment with `openpyxl` on
 first run. You do not need to `pip install` anything.
 
 ### Get the skill
+
+**Claude Code, as a plugin (easiest).** Inside Claude Code:
+
+```
+/plugin marketplace add mitchasegura-ux/job-hunt
+/plugin install job-hunting@job-hunt
+```
+
+Updates come through `/plugin`. If another plugin already uses a command name
+like `/job-hunt`, use the prefixed form `/job-hunting:job-hunt`.
+
+**Claude Code or Codex, from a clone:**
 
 ```bash
 git clone https://github.com/mitchasegura-ux/job-hunt.git
@@ -309,6 +327,8 @@ scripts/
 jobsearch.config.example.yml
 install.sh                   macOS / Linux installer
 install.ps1                  Windows installer
+.claude-plugin/               Claude Code plugin + marketplace manifests
+docs/demo.svg                README demo image
 ```
 
 ## Privacy

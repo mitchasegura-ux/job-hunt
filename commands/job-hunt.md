@@ -1,3 +1,8 @@
+---
+description: Search, screen, and build tailored application packets
+argument-hint: '[filter, e.g. "last 3 days" or "remote"]'
+---
+
 # /job-hunt - Search, screen, and build application packets
 
 Invoke the `job-hunting` skill and follow its **Search and build** section.

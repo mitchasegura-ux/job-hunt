@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="468" viewBox="0 0 860 468" role="img" aria-label="job-hunting demo: a ranked job shortlist with odds, then the cover letter checker failing a draft for em-dashes and AI phrases">
+<rect width="860" height="468" rx="10" fill="#0d1117"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f57"/><circle cx="42" cy="20" r="6" fill="#febc2e"/><circle cx="62" cy="20" r="6" fill="#28c840"/>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" xml:space="preserve">
+<text x="22" y="58"><tspan fill="#7ee787">&gt; </tspan><tspan fill="#d2a8ff">/job-hunt remote</tspan></text>
+<text x="22" y="102"><tspan fill="#79c0ff">QUALIFYING</tspan></text>
+<text x="22" y="124"><tspan fill="#e6edf3">1. Systems Administrator, Acme Health, Portland      $62-70k   </tspan><tspan fill="#7ee787">~65%</tspan></text>
+<text x="22" y="146"><tspan fill="#e3b341">   Risk: wants 3 years of Intune; you have Jamf</tspan></text>
+<text x="22" y="168"><tspan fill="#e6edf3">2. IT Support Specialist, City of Beaverton          $28/hr    </tspan><tspan fill="#7ee787">~55%</tspan></text>
+<text x="22" y="190"><tspan fill="#e3b341">   Risk: deadline Friday</tspan></text>
+<text x="22" y="212"><tspan fill="#79c0ff">DISQUALIFIED</tspan></text>
+<text x="22" y="234"><tspan fill="#8b949e">- Network Engineer, Contoso: requires active Secret clearance</tspan></text>
+<text x="22" y="256"><tspan fill="#8b949e">- Help Desk, Fabrikam: $19-24/hr, bottom of range below your $25 floor</tspan></text>
+<text x="22" y="300"><tspan fill="#e6edf3">Build packets for 1 and 2?</tspan></text>
+<text x="22" y="344"><tspan fill="#7ee787">$ </tspan><tspan fill="#e6edf3">check_letter.py Doe_CoverLetter.md --target 400</tspan></text>
+<text x="22" y="366"><tspan fill="#e6edf3">  words: 341  (target 400)</tspan></text>
+<text x="22" y="388"><tspan fill="#ff7b72">  FAIL</tspan><tspan fill="#e6edf3">  3 em-dash(s) on line(s) [3, 7, 11]</tspan></text>
+<text x="22" y="410"><tspan fill="#ff7b72">  FAIL</tspan><tspan fill="#e6edf3">  banned phrase: "I want to be straight"</tspan></text>
+<text x="22" y="432"><tspan fill="#ff7b72">  FAIL</tspan><tspan fill="#e6edf3">  banned phrase: "genuinely"</tspan></text>
+</g>
+</svg>

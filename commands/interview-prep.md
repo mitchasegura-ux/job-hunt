@@ -1,3 +1,8 @@
+---
+description: Build a mock-interview prompt and 2-page reference card
+argument-hint: '<company or role>'
+---
+
 # /interview-prep - Build mock interview and reference card
 
 Invoke the `job-hunting` skill and follow its **Interview prep** section. Read

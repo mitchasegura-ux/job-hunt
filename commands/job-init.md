@@ -1,3 +1,8 @@
+---
+description: Set up a job search workspace, tracker, and config
+argument-hint: '[workspace dir]'
+---
+
 # /job-init - Set up a job search workspace
 
 Invoke the `job-hunting` skill and follow its **Initialize a workspace** section.

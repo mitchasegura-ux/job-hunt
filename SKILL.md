@@ -41,7 +41,8 @@ whoever is running it.
 
 `$SKILL_DIR` means the folder this `SKILL.md` lives in, wherever it was
 installed (`~/.claude/skills/job-hunting`, `~/.codex/skills/job-hunting`, a repo
-checkout, etc.). Resolve it once per session and reuse it.
+checkout, etc.). Installed as a Claude Code plugin, it is `${CLAUDE_PLUGIN_ROOT}`.
+Resolve it once per session and reuse it.
 
 `scripts/ensure_venv.sh` prints a python path with openpyxl available. Every
 script needs it, because system python fails under PEP 668.

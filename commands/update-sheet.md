@@ -1,3 +1,8 @@
+---
+description: Sweep Gmail and update the application tracker
+argument-hint: '[window, e.g. "last 14 days"]'
+---
+
 # /update-sheet - Sweep Gmail and update the tracker
 
 Invoke the `job-hunting` skill and follow its **Update the tracker** section. Read

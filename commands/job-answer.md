@@ -1,3 +1,8 @@
+---
+description: Answer one free-text application question in your voice
+argument-hint: '<question> [company] [char limit]'
+---
+
 # /job-answer - Answer one free-text application question
 
 Invoke the `job-hunting` skill and follow its **Answer one application question**

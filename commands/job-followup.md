@@ -1,3 +1,8 @@
+---
+description: Draft follow-ups for applications that went quiet
+argument-hint: '[threshold or company]'
+---
+
 # /job-followup - Draft follow-ups on quiet applications
 
 Invoke the `job-hunting` skill and follow its **Follow up** section.

@@ -1,0 +1,13 @@
+{
+  "name": "job-hunting",
+  "version": "1.0.0",
+  "description": "Run a job search end to end: screen postings against your constraints, write cover letters in your measured voice, track applications, and prep interviews.",
+  "author": {
+    "name": "Mitch Segura",
+    "url": "https://github.com/mitchasegura-ux"
+  },
+  "homepage": "https://github.com/mitchasegura-ux/job-hunt",
+  "repository": "https://github.com/mitchasegura-ux/job-hunt",
+  "license": "MIT",
+  "keywords": ["job-search", "resume", "cover-letter", "interview", "tracker"]
+}

@@ -1,3 +1,8 @@
+---
+description: Build master profile, claims boundary, base resumes, and voice rules
+argument-hint: '[materials dir]'
+---
+
 # /job-profile - Build the candidate profile from their materials
 
 Invoke the `job-hunting` skill and follow its **Build the profile** section. Read
