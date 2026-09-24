@@ -1,0 +1,64 @@
+# job-hunting skill config
+# Copy to your workspace root as jobsearch.config.yml, or let /job-init write it.
+# Paths are relative to the workspace root. Point them at files that already
+# exist rather than moving anything.
+
+candidate:
+  name:   Jane Doe
+  phone:  "(555) 555-0100"
+  email:  jane@example.com
+  links:
+    linkedin: linkedin.com/in/janedoe
+  file_prefix: Doe           # Doe_Resume.md, Doe_CoverLetter.md
+
+paths:
+  master_profile:  resume/MASTER.md          # source of truth, never sent
+  claims_boundary: resume/MASTER.md          # CLAIMS BOUNDARY section at the end
+  base_resumes:    resume/base/
+  voice_template:  cover-letters/TEMPLATE.md
+  applications:    Applications/
+  tracker:         Application_Tracking.xlsx
+  latex_header:    resume/compact.tex
+  past_letters:    cover-letters/past/       # real letters, the voice baseline
+
+resume_bases:
+  it:  resume/base/Doe_IT.md
+  av:  resume/base/Doe_AV.md
+
+constraints:
+  pay_floor:
+    hourly: 25
+    annual: 55000
+  schedule: >
+    Scheduled weekend shifts disqualify. On-call rotation is negotiable.
+  commute: >
+    Anywhere in the metro listed under search.locations, plus remote.
+  hard_gates:
+    - No active security clearance. Anything requiring one is disqualified.
+
+letter:
+  target_words: 400       # measure this from past_letters, do not guess
+  max_words:    500
+  em_dashes:    0         # measured count across past letters
+
+search:
+  locations:
+    - Portland, OR
+    - Beaverton, OR
+    - remote
+  tracks:
+    it:
+      - IT support specialist
+      - help desk technician
+      - systems administrator
+      - network administrator
+    av:
+      - audio visual technician
+      - AV installation technician
+
+# Employer portals that do not surface on aggregators. Check these directly.
+direct_portals:
+  districts:
+    example_district: https://www.applitrack.com/<district>/onlineapp/default.aspx
+  universities:
+    example_u: https://jobs.example.edu/

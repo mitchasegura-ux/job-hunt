@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.bak
+.DS_Store
+# personal data never belongs in this repo
+jobsearch.config.yml
+*.xlsx
+Applications/
+resume/
